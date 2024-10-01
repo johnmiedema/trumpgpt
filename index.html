@@ -1,0 +1,245 @@
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrumpGPT</title>
+
+<script type="text/javascript">
+
+const dict_abortion = ["abortion", "immigration", "women", "baby", "babies", "roe", "wade", "supreme", "court"];
+const dict_border = ["border", "immigration", "race", "dogs", "cats", "Springfield", "foreign", "refugee"];
+const dict_child = ["child", "children", "childcare"];
+const dict_climate = ["climate", "environment", "pollution", "oil", "green", "solar", "energy"];
+const dict_crime = ["crime", "criminal", "law", "police", "drugs", "felon", "stormy"];
+const dict_economy = ["economy", "jobs", "inflation"];
+const dict_election = ["Jan", "January", "peaceful", "election"];
+const dict_guns = ["gun", "guns", "NRA", "shootings", "schools", "gun control"];
+const dict_health = ["health", "healthcare", "cancer", "prescriptions", "drugs"];
+const dict_kamala = ["kamala", "harris", "tim", "walz", "joe", "biden", "obama", "debate"];
+const dict_war = ["war", "gaza", "palestine", "genocide", "hamas", "israel", "lebanon", "ukraine", "russia"];
+
+function answer(){
+
+	//clear the output
+	document.getElementById("output").innerHTML = "";
+        
+	var question = document.getElementById("txtQuestion").value;
+	var answer = "";
+	let answers = [];
+
+//random start
+
+	const array = ["I'm a very smart man - a genius.", "What a nice-looking man. Who is that? Oh it's me, Trump. What a wonderful looking person.", "I’m the greatest of all time - maybe greater even than Elvis.", "Well, I think there’s a theory out there. That’s certainly one of many theories because I was doing very well against China.", "We have a concept of a plan."];
+	answer = array[Math.floor(Math.random() * array.length)];
+	answers.push(answer);
+
+//policy - abortion
+
+	if (checkWordInString(question, dict_abortion)) {
+	
+	answer = "Let's talk about our great women, because women have gone through a lot — they've gone through a lot.";
+	answers.push(answer);
+	
+	answer = "Women are poorer than they were four years ago; are less healthy than they were four years ago; are less safe on the streets than they were four years ago; are paying much higher prices for groceries and everything else than they were four years ago; are more stressed and depressed and unhappy than they were four years ago I will fix all of that — women, I will fix all of that and I will fix it fair.";
+	answers.push(answer);
+	
+	answer = "Women will be happy, healthy, confident, and free. You will no longer be thinking about abortion.";
+	answers.push(answer);
+
+	answer = "Democrats support killing babies after they are born."; 
+	answers.push(answer);
+	}
+
+//policy - border
+
+	if (checkWordInString(question, dict_border)) {
+	
+	answer = "Joe Biden is letting millions of people from jails, from prisons, from insane asylums, from mental institutions, drug dealers pour in.";
+	answers.push(answer);
+	
+	answer = "Kamala Harris should be impeached and prosecuted for her actions related to the southern U.S. border.";
+	answers.push(answer);
+	
+	answer = "In Springfield, they’re eating the dogs. The people that came in. They’re eating the cats. They’re eating – they’re eating the pets of the people that live there. And this is what’s happening in our country, and it’s a shame.";
+	answers.push(answer);
+	}
+
+//policy - child
+
+	if (checkWordInString(question, dict_child)) {
+	
+	answer = "But I think when you talk about the kind of numbers that I’m talking about, that – because, look, child care is child care. It’s – couldn’t – you know, it’s something – you have to have it. In this country, you have to have it.";
+	answers.push(answer);
+	
+	answer = "But when you talk about those numbers compared to the kind of numbers that I’m talking about by taxing foreign nations at levels that they’re not used to, but they’ll get used to it very quickly – and it’s not going to stop them from doing business with us but they’ll have a very substantial tax when they send product into our country.";
+	answers.push(answer);
+	
+	answer = "Those numbers are so much bigger than any numbers that we’re talking about, including child care. That – it’s going to take care – we’re going to have – I – I look forward to having no deficits within a fairly short period of time, coupled with the reductions that I told you about on waste and fraud and all of the other things that are going on in our country.";
+	answers.push(answer);
+	}
+
+//policy - climate
+
+	if (checkWordInString(question, dict_climate)) {
+	
+	answer = "So we have to start always with energy. Always. I don't want to be boring about it, but there's no bigger subject. It covers everything. If you make donuts, if you make cars, whatever you make, energy's a big deal. And we're gonna get that.";
+	answers.push(answer);
+	
+	answer = "They want money, they want to build windmills, we want money for these windmills, ay-yai-yai. Anyway, but you know what? It was amazing.";
+	answers.push(answer);
+	}
+
+//policy - crime
+
+	if (checkWordInString(question, dict_crime)) {
+	
+	answer = "Crime is through the roof.";
+	answers.push(answer);
+	
+	answer = "We have millions of people pouring into our country from prisons and jails, from mental institutions and insane asylums. 21 million people were pouring in.";
+	answers.push(answer);
+
+	answer = "Venezuela, if you look at their crime statistics, they’ve gone down 72% in crime because they’re releasing all their criminals into our country because of this horrible president that we have.";
+	answers.push(answer);
+	}
+
+//policy - economy
+
+	if (checkWordInString(question, dict_economy)) {
+	
+	answer = "“This is Tic Tacs, right? This is inflation, this is what’s happened.";
+	answers.push(answer);
+	
+	answer = "Our country has never been so disrespected as it is right now. It’s a laughing stock all over the world.";
+	answers.push(answer);
+
+	answer = "We cut taxes more than, you know, the biggest tax cut in history, as you know, biggest regulation cuts in history.";
+	answers.push(answer);
+	}
+
+//policy - election
+
+	if (checkWordInString(question, dict_election)) {
+	
+	answer = "We won the election.";
+	answers.push(answer);
+	
+	answer = "Nancy Pelosi was responsible for the Jan. 6 2021 because she didn’t do her job.";
+	answers.push(answer);
+
+	answer = "You know, I was told if you get 63 million, which I got in 2016, you get 63 million votes, you win. I got 75 million votes. I got 12 million more, more than any other sitting president ever by far, not even close.";
+	answers.push(answer);
+	}
+
+//policy - guns
+
+	if (checkWordInString(question, dict_guns)) {
+	
+	answer = "President Kamala Harris will take away your guns and leave you totally defenseless in your house. She supports mandatory gun confiscation.";
+	answers.push(answer);
+	}
+
+//policy - health
+
+	if (checkWordInString(question, dict_health)) {
+	
+	answer = "We have a concept of a plan.";
+	answers.push(answer);
+
+	answer = "I see the disinfectant, where it knocks it out in one minute. And is there a way we can do something like that, by injection inside or almost a cleaning, because you see it gets in the lungs and it does a tremendous number on the lungs, so it’d be interesting to check that, so that you’re going to have to use medical doctors with, but it sounds interesting to me. So, we’ll see, but the whole concept of the light, the way it kills it in one minute. That’s pretty powerful.";
+	answers.push(answer);
+	}
+
+//policy - kamala
+
+	if (checkWordInString(question, dict_kamala)) {
+	
+	answer = "Up 6 points in the Rasmussnen Poll. I WON THE DEBATE! A nice lead over the Marxist Candidate, Comrade Kamala Harris, who had a very hard time yesterday answering the simplest of questions in Pennsylvania, where she will end Fracking.";
+	answers.push(answer);
+
+	answer = "President Biden hates Harris.";
+	answers.push(answer);
+
+	answer = "Harris is mentally disabled, mentally impaired.";
+	answers.push(answer);
+	}
+
+//policy - war
+
+	if (checkWordInString(question, dict_war)) {
+	
+	answer = "There was nobody tougher on Russia than me, nobody.";
+	answers.push(answer);
+
+	answer = "So many mistakes were made ahead of the Civil War. See, there was something I think could have been negotiated, to be honest with you. I think you could have negotiated that. All the people died. So many people died.";
+	answers.push(answer);
+
+	answer = "Harris met with Vladimir Putin to try to stop him from invading Ukraine but three days later, he went in, and he started the war because everything they said was weak and stupid.";
+	answers.push(answer);
+	}
+
+
+// random closing
+
+	const array2 = ["Thank you. Very good question.", "Now all I know about magnets is this - give me a glass of water, let me drop it on the magnets, that's the end of the magnets.", "First they say, Sir, how do you do it? How do you wake up in the morning and put on your pants? And I say - Well I don’t think about it too much. I don’t want to think about it because if I think about it too much maybe I won’t want to do it but I love it because we’re going to do something for this country that’s never been done before.", "Hannibal Lecter - how great an actor was he?"];
+	answer = array2[Math.floor(Math.random() * array2.length)];
+	answers.push(answer);
+	
+//write
+
+	writeTextWithPause(answers);
+};
+
+function checkWordInString(str, wordArray) {
+
+  // Split the string into an array of words, using space as the delimiter
+  let wordsInStr = str.split(' ');
+
+  // Loop through the words in the array
+  for (let word of wordsInStr) {
+    // Check if the word is in the wordArray
+    if (wordArray.includes(word)) {
+      return true; // Return true if a match is found
+    }
+  }
+
+  return false; // Return false if no match is found
+}
+
+function writeTextWithPause(textArray) {
+
+	const min = 1000;
+	const max = 4000;
+
+    	let index = 0;
+
+    	function writeNext() {
+        	if (index < textArray.length) {
+            	const outputElement = document.getElementById("output");
+            	outputElement.innerHTML += textArray[index] + "<br><br>"; // Append each string with a line break
+            	index++;
+
+		// random delay between each string
+		const delay = Math.floor(Math.random() * (max - min + 1)) + min;
+            	setTimeout(writeNext, delay);
+        }
+    }
+
+    writeNext();
+}
+
+</script>
+</head>
+
+<body style="font-family: sans-serif;max-width:1000px">
+<h1>TrumpGPT</h1>
+<h2>🟠🙊🥗 Policy Salad Generator</h2>
+<p>This work is shared to the public domain <a href="https://creativecommons.org/publicdomain/zero/1.0/">(CCO 1.0)</a> at <a href="https://github.com/johnmiedema/trumpgpt">GitHub</a>. Contact the creator at <a href="https://johnmiedema.art/">johnmiedema.art</a>.
+
+<p><input id="txtQuestion" type="text" name="txtQuestion" placeholder="Ask Trump a Policy Question" size="100" required />
+<p><input id="butAnswer" type="button" value="Answer" onclick="answer();" />
+<div id="output"></div>
+
+</body>
+
+</html>
