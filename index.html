@@ -15,7 +15,7 @@ const dict_economy = ["economy", "jobs", "inflation"];
 const dict_election = ["Jan", "January", "peaceful", "election"];
 const dict_guns = ["gun", "guns", "NRA", "shootings", "schools", "gun control"];
 const dict_health = ["health", "healthcare", "cancer", "prescriptions", "drugs"];
-const dict_kamala = ["kamala", "harris", "tim", "walz", "joe", "biden", "obama", "debate"];
+const dict_kamala = ["kamala", "harris", "tim", "walz", "joe", "biden", "obama", "debate", "taylor"];
 const dict_war = ["war", "gaza", "palestine", "genocide", "hamas", "israel", "lebanon", "ukraine", "russia"];
 
 function answer(){
@@ -24,7 +24,9 @@ function answer(){
 	document.getElementById("output").innerHTML = "";
         
 	var question = document.getElementById("txtQuestion").value;
+	question = question.toLowerCase();
 	question = removePunctuation(question);
+
 	var answer = "";
 	let answers = [];
 
@@ -162,6 +164,9 @@ function answer(){
 	answers.push(answer);
 
 	answer = "Harris is mentally disabled, mentally impaired.";
+	answers.push(answer);
+
+	answer = "I hate Taylor Swift.";
 	answers.push(answer);
 	}
 
