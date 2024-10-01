@@ -24,6 +24,7 @@ function answer(){
 	document.getElementById("output").innerHTML = "";
         
 	var question = document.getElementById("txtQuestion").value;
+	question = removePunctuation(question);
 	var answer = "";
 	let answers = [];
 
@@ -226,6 +227,10 @@ function writeTextWithPause(textArray) {
     }
 
     writeNext();
+}
+
+function removePunctuation(str) {
+    return str.replace(/[.,\/?#!$%\^&\*;:{}=\-_`~()]/g, "");
 }
 
 </script>
