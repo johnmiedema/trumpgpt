@@ -6,17 +6,17 @@
 
 <script type="text/javascript">
 
-const dict_abortion = ["abortion", "immigration", "women", "baby", "babies", "roe", "wade", "supreme", "court"];
-const dict_border = ["border", "immigration", "race", "dogs", "cats", "Springfield", "foreign", "refugee"];
-const dict_child = ["child", "children", "childcare"];
-const dict_climate = ["climate", "environment", "pollution", "oil", "green", "solar", "energy"];
+const dict_abortion = ["abortion", "immigration", "woman", "women", "baby", "babies", "roe", "wade", "supreme", "court"];
+const dict_border = ["border", "immigration", "race", "dog", "cat", "dogs", "cats", "Springfield", "foreign", "refugee", "refugees"];
+const dict_child = ["child", "children", "childcare", "kid", "kids"];
+const dict_climate = ["climate", "environment", "pollution", "oil", "green", "solar", "energy", "frack", "fracking"];
 const dict_crime = ["crime", "criminal", "law", "police", "drugs", "felon", "stormy"];
-const dict_economy = ["economy", "jobs", "inflation"];
+const dict_economy = ["economy", "job", "jobs", "inflation", "cost"];
 const dict_election = ["Jan", "January", "peaceful", "election"];
 const dict_guns = ["gun", "guns", "NRA", "shootings", "schools", "gun control"];
 const dict_health = ["health", "healthcare", "cancer", "prescriptions", "drugs"];
-const dict_kamala = ["kamala", "harris", "tim", "walz", "joe", "biden", "obama", "debate", "taylor"];
-const dict_war = ["war", "gaza", "palestine", "genocide", "hamas", "israel", "lebanon", "ukraine", "russia"];
+const dict_kamala = ["kamala", "harris", "tim", "walz", "joe", "biden", "obama", "debate", "taylor", "swift"];
+const dict_war = ["war", "gaza", "palestine", "genocide", "hamas", "israel", "lebanon", "ukraine", "russia", "iran", "hezbollah", "middle"];
 
 function answer(){
 
@@ -110,7 +110,7 @@ function answer(){
 
 	if (checkWordInString(question, dict_economy)) {
 	
-	answer = "“This is Tic Tacs, right? This is inflation, this is what’s happened.";
+	answer = "This is Tic Tacs, right? This is inflation, this is what’s happened.";
 	answers.push(answer);
 	
 	answer = "Our country has never been so disrespected as it is right now. It’s a laughing stock all over the world.";
@@ -187,7 +187,8 @@ function answer(){
 
 // random closing
 
-	const array2 = ["Thank you. Very good question.", "Now all I know about magnets is this - give me a glass of water, let me drop it on the magnets, that's the end of the magnets.", "First they say, Sir, how do you do it? How do you wake up in the morning and put on your pants? And I say - Well I don’t think about it too much. I don’t want to think about it because if I think about it too much maybe I won’t want to do it but I love it because we’re going to do something for this country that’s never been done before.", "Hannibal Lecter - how great an actor was he?"];
+	const array2 = ["Thank you. Very good question.", "Now all I know about magnets is this - give me a glass of water, let me drop it on the magnets, that's the end of the magnets.", "First they say, Sir, how do you do it? How do you wake up in the morning and put on your pants? And I say - Well I don’t think about it too much. I don’t want to think about it because if I think about it too much maybe I won’t want to do it but I love it because we’re going to do something for this country that’s never been done before.", "Hannibal Lecter - how great an actor was he?", "We had 107000 people show up in New Jersey. We had 68000 people show up in Alabama. We had 79 or 81000 in South Carolina.", "I've spoken to the biggest crowds. Nobody's spoken to crowds bigger than me. If you look at Martin Luther King when he did his great speech and you look at ours - same real estate, same everything — same number of people, if not, we had more."];
+	
 	answer = array2[Math.floor(Math.random() * array2.length)];
 	answers.push(answer);
 	
